@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Bankruptcy Early-Warning Screener
 
 [![CI](https://github.com/suvampriyaranjansahoo/bankruptcy-early-warning-screener/actions/workflows/ci.yml/badge.svg)](https://github.com/suvampriyaranjansahoo/bankruptcy-early-warning-screener/actions/workflows/ci.yml)
