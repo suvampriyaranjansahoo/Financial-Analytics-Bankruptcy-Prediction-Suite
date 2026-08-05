@@ -1,0 +1,5 @@
+company,fiscal_year,revenue,gross_profit,ebit,net_income,operating_cash_flow,current_assets,current_liabilities,cash_and_equivalents,inventory,total_assets,total_liabilities,shareholders_equity,retained_earnings,long_term_debt,market_capitalization,shares_outstanding
+Northstar Retail,2023,2400,780,145,82,156,760,510,150,280,1680,890,790,410,360,2100,95
+Northstar Retail,2024,2570,860,180,109,198,840,520,185,295,1790,900,890,505,330,2600,93
+Harbor Stores,2023,1800,460,18,-42,12,430,510,45,240,1320,1110,210,90,610,220,118
+Harbor Stores,2024,1590,340,-55,-126,-58,340,560,24,205,1180,1095,85,-38,670,58,132

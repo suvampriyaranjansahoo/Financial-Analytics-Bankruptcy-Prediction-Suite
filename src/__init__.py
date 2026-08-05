@@ -1,0 +1,1 @@
+"""Financial distress screening package."""
