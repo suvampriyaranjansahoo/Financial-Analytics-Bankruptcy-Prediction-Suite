@@ -55,7 +55,15 @@ python -m src.pipeline --input data/sample_financials.csv --output data/processe
 | `sql/` | SQLite-compatible analytical schema and views |
 | `docs/` | Methodology, data dictionary, governance, and deployment guidance |
 | `tests/` | Formula and pipeline tests |
-| `notebooks/` | EDA, modelling, explainability, and model-comparison workbooks |
+| `notebooks/` | 65 executed EDA, preprocessing, modelling, validation, explainability, and deployment workbooks |
+| `sql/portfolio/` | Sequential PostgreSQL analysis portfolio: setup through stored procedures |
+| `analysis_outputs/` | Published, compact analysis artefacts such as global SHAP feature importance |
+
+## Analysis workflow
+
+The full analytical journey is versioned in the repository, not hidden behind the deployed app. Start with the [notebook guide](notebooks/README.md): it maps the 65 notebooks into EDA, data preparation, model development, explainability, validation, and production packaging.
+
+For database analysis, use the [SQL portfolio guide](sql/portfolio/README.md). The numbered scripts demonstrate database setup, import, data-quality checks, cleaning, EDA, feature engineering, window functions, CTEs, views, and stored procedures.
 
 ## Deployment
 
