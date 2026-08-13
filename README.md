@@ -70,6 +70,17 @@ The executed notebooks examine the full analytical process:
 
 The detailed workbook map is available in [`notebooks/README.md`](notebooks/README.md). The PostgreSQL analysis workflow is documented in [`sql/portfolio/README.md`](sql/portfolio/README.md).
 
+## Selected analysis evidence
+
+The following charts are published from the project workflow to make the analytical story reviewable without opening a notebook.
+
+<p align="center">
+  <img src="images/portfolio/eda_company_status_by_year.png" alt="Company status by year showing active and failed observations" width="48%" />
+  <img src="images/portfolio/eda_records_by_year.png" alt="Total analytical records by year" width="48%" />
+</p>
+
+**Coverage and class context.** The annual record count declines across the historical panel, while failed observations form a much smaller series than active observations. This is why the modelling workflow uses stratified splits and evaluates recall, precision, F1, and ROC-AUC rather than accuracy alone.
+
 ## Machine-learning evaluation
 
 Models were trained and evaluated on the same **80/20 stratified split** using `random_state=42`. Accuracy alone is misleading on a 6.6% positive class; the decision emphasis is on **ROC-AUC, recall, precision, and F1**.
@@ -84,6 +95,12 @@ Models were trained and evaluated on the same **80/20 stratified split** using `
 | Logistic Regression | 56.2% | 9.9% | 69.2% | 17.3% | 65.9% | Interpretable baseline |
 
 \*SVM was trained on a stratified 20,000-row training subsample due to the computational cost of RBF probability estimates.
+
+<p align="center">
+  <img src="images/portfolio/model_comparison_radar.png" alt="Radar chart comparing classification model metrics" width="65%" />
+</p>
+
+**Model trade-off view.** The radar chart makes the operational trade-off explicit: some models maximise recall by generating more alerts, while XGBoost provides the best overall balance of discrimination and F1 for the stated triage use case.
 
 ### Selected model: XGBoost
 
@@ -105,6 +122,13 @@ The research workflow includes:
 - Fairness / bias assessment
 
 The compact published SHAP output is in [`analysis_outputs/shap_global_feature_importance.csv`](analysis_outputs/shap_global_feature_importance.csv). See the `07*` and `08*` notebooks for supporting analysis.
+
+<p align="center">
+  <img src="images/portfolio/shap_global_summary.png" alt="SHAP global feature impact summary" width="48%" />
+  <img src="images/portfolio/shap_local_waterfall.png" alt="SHAP local waterfall explanation for an individual prediction" width="48%" />
+</p>
+
+**Explainability evidence.** The global summary ranks the anonymised model inputs by their impact on risk predictions; the waterfall chart decomposes one individual prediction into feature-level contributions. Since the source fields are anonymised, these charts are interpreted as model diagnostics, not as named accounting-ratio conclusions.
 
 ## SQL analytics
 
@@ -151,6 +175,18 @@ docker run -p 8501:8501 bankruptcy-screener
 ```
 
 For Streamlit Community Cloud, use `app/streamlit_app.py` as the entry point. See [`docs/08_Deployment.md`](docs/08_Deployment.md).
+
+## Power BI executive dashboard
+
+The Power BI executive overview turns the same risk workflow into a finance-leadership view: portfolio size, bankruptcy rate, average Altman Z-Score, high-risk rate, risk-band breakdown, annual trend, and highest-risk periods. The supporting PBIX and Excel model remain local development artefacts; the dashboard screenshot below is committed as portfolio evidence.
+
+<p align="center">
+  <img src="images/deployment/powerbi_executive_overview.png" alt="Bankruptcy risk prediction Power BI executive dashboard" width="100%" />
+</p>
+
+### Deployment preview
+
+`images/deployment/` is reserved for a final `streamlit_demo.gif` screen recording once the Streamlit dashboard has been run locally or deployed. Adding a real interaction recording—rather than an artificial GIF made from a static screenshot—will give recruiters and reviewers an accurate view of the deployed product.
 
 ## Outcomes and business value
 
