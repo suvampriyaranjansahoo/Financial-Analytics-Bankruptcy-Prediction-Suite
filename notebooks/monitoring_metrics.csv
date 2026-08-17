@@ -1,0 +1,6 @@
+Metric,Value
+Total Requests,1500
+Successful Predictions,1492
+Failed Requests,8
+Average Latency (ms),34.7
+Model Version,1.0.0

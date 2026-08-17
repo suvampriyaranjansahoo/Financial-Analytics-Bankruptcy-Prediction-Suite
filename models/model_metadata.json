@@ -1,0 +1,10 @@
+{
+    "model_name": "Bankruptcy Risk Prediction",
+    "model_file": "../models/production_bankruptcy_model.joblib",
+    "algorithm": "RandomForestClassifier",
+    "version": "1.0.0",
+    "dataset": "../data/datasets/american_bankruptcy_cleaned.csv",
+    "feature_count": 19,
+    "created_utc": "2026-08-08T11:02:08.019928Z",
+    "sha256": "1fca8cfdb755bdd267f749df068bc76225d1bff159de6b00bf222b0c8b8f2bcc"
+}
