@@ -175,7 +175,6 @@ Two complementary SQL layers are included:
 
 A complementary executive dashboard is included at [`Dashboard/Bankruptcy_PowerBI_Data.pbix`](Dashboard/Bankruptcy_PowerBI_Data.pbix) for stakeholders who prefer a BI tool over the Streamlit app — company-year trends, risk-band distribution, and portfolio-level summary views built on the same cleaned dataset.
 
-![Power BI dashboard screenshot](docs/images/powerbi_dashboard.png)
 <!-- TODO: open the .pbix in Power BI Desktop, screenshot a page, save to docs/images/powerbi_dashboard.png -->
 
 ## Deployment architecture
