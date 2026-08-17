@@ -4,11 +4,45 @@
 ![Machine Learning](https://img.shields.io/badge/ML-XGBoost%20%7C%20LightGBM%20%7C%20CatBoost-0F766E)
 ![SQL](https://img.shields.io/badge/SQL-PostgreSQL%20%7C%20SQLite-336791?logo=postgresql&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?logo=streamlit&logoColor=white)
+![CI](https://github.com/suvampriyaranjansahoo/Financial-Analytics-Bankruptcy-Prediction-Suite/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 An end-to-end financial-risk analytics platform that identifies early warning signs of corporate distress from historical financial statements. The project moves from raw data and SQL analysis to machine-learning comparison, model explainability, and an analyst-facing Streamlit screening application.
 
+**[Live demo](#) · [Video walkthrough](#)** <!-- TODO: replace with your Streamlit Community Cloud URL and/or a Loom/YouTube link -->
+
+![App screenshot](docs/images/app_screenshot.png)
+<!-- TODO: add a real screenshot — run `streamlit run app/streamlit_app.py`, screenshot the loaded screener, save to docs/images/app_screenshot.png -->
+
 > **Decision-support only:** this project prioritises companies for human review. It is not a bankruptcy determination, lending decision, investment recommendation, or audit opinion.
+
+## Contents
+
+- [Skills demonstrated](#skills-demonstrated)
+- [Business problem](#business-problem)
+- [Proposed solution](#proposed-solution)
+- [Dataset](#dataset)
+- [Analysis workflow](#analysis-workflow)
+- [Machine-learning evaluation](#machine-learning-evaluation)
+- [Explainability and model assurance](#explainability-and-model-assurance)
+- [SQL analytics](#sql-analytics)
+- [Power BI dashboard](#power-bi-dashboard)
+- [Deployment architecture](#deployment-architecture)
+- [Outcomes and business value](#outcomes-and-business-value)
+- [Limitations and responsible use](#limitations-and-responsible-use)
+- [References](#references)
+- [About](#about)
+
+## Skills demonstrated
+
+| Area | Tools / techniques |
+|---|---|
+| Data engineering | Pandas, data validation, SQL (PostgreSQL + SQLite), reproducible pipelines |
+| Machine learning | XGBoost, LightGBM, CatBoost, Random Forest, SVM, Logistic Regression, stratified cross-validation, class-imbalance handling |
+| Model explainability | SHAP (global + local), LIME, calibration, error analysis, fairness/bias assessment |
+| Software engineering | Modular Python package (`src/`), unit tests (`pytest`), CI (GitHub Actions), Docker |
+| Deployment & BI | Streamlit web app, Docker containerisation, Power BI dashboard |
+| Domain expertise | Altman Z / Z'' score, Piotroski F-score, financial-statement ratio analysis |
 
 ## Business problem
 
@@ -137,6 +171,13 @@ Two complementary SQL layers are included:
 - [`sql/`](sql/) contains a lightweight SQLite-compatible schema and views for the deployable screener.
 - [`sql/portfolio/`](sql/portfolio/) contains the full 11-step PostgreSQL portfolio: setup, import, quality checks, cleaning, EDA, feature engineering, windows, CTEs, views, procedures, and interview-ready queries.
 
+## Power BI dashboard
+
+A complementary executive dashboard is included at [`Dashboard/Bankruptcy_PowerBI_Data.pbix`](Dashboard/Bankruptcy_PowerBI_Data.pbix) for stakeholders who prefer a BI tool over the Streamlit app — company-year trends, risk-band distribution, and portfolio-level summary views built on the same cleaned dataset.
+
+![Power BI dashboard screenshot](docs/images/powerbi_dashboard.png)
+<!-- TODO: open the .pbix in Power BI Desktop, screenshot a page, save to docs/images/powerbi_dashboard.png -->
+
 ## Deployment architecture
 
 | Layer | Implementation |
@@ -214,3 +255,10 @@ Read [`docs/07_Model_Governance.md`](docs/07_Model_Governance.md) before any mat
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## About
+
+Built by **Suvam Priyaranjan Sahoo** as an end-to-end portfolio project spanning SQL, machine learning, model explainability, and deployment.
+
+<!-- TODO: fill in — pick whichever of these you actually want public -->
+[LinkedIn](#) · [Portfolio](#) · [Email](#)
